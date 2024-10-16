@@ -36,6 +36,16 @@ public class Atom1Manager : MonoBehaviour
         atoms.Add(atom);
         return atoms.Count-1;
     }
+    public List<Atom1> AtomsCloseTo(Vector2 pos){
+        List<Atom1> res=new List<Atom1>();
+        float distsqr=boundDetectDist*boundDetectDist;
+        for(int i=atoms.Count-1;i>=0;--i){
+            if(AtomUtil.DistanceSqr(atoms[i].transform.position, pos)<=distsqr){
+                res.Add(atoms[i]);
+            }
+        }
+        return res;
+    }
     public List<Atom1> AtomsCloseTo(Atom1 self){
         List<Atom1> res=new List<Atom1>();
         float distsqr=boundDetectDist*boundDetectDist;

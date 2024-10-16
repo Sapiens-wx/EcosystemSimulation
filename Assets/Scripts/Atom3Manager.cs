@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Atom2Manager : MonoBehaviour
+public class Atom3Manager : MonoBehaviour
 {
-    public static Atom2Manager inst;
+    public static Atom3Manager inst;
     public int atomCount;
     public float boundDetectDist;
     /// <summary>
@@ -13,7 +13,7 @@ public class Atom2Manager : MonoBehaviour
     public float boundDistMax;
     public float boundLerpAmount;
     public int maxBoundNum;
-    List<Atom2> atoms;
+    List<Atom3> atoms;
     void OnDrawGizmosSelected(){
         Gizmos.color=Color.white;
         Gizmos.DrawWireSphere(transform.position, boundDetectDist);
@@ -22,10 +22,10 @@ public class Atom2Manager : MonoBehaviour
     }
     void Awake(){
         inst=this;
-        atoms=new List<Atom2>();
+        atoms=new List<Atom3>();
     }
 
-    public int RegisterAtom(Atom2 atom){
+    public int RegisterAtom(Atom3 atom){
         atoms.Add(atom);
         return atoms.Count-1;
     }
