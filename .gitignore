@@ -1,8 +1,9 @@
 # This .gitignore file should be placed at the root of your Unity project directory
-.vscode/
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+ignore.conf
+/.plastic/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -26,9 +27,6 @@
 
 # Visual Studio cache directory
 .vs/
-
-# Idea cache directory
-/.idea/
 
 # Gradle cache directory
 .gradle/
@@ -55,6 +53,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+/.vscode/
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -74,7 +73,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# Ignore temporaries from GameCI
-/[Aa]rtifacts/
-/[Cc]odeCoverage/
